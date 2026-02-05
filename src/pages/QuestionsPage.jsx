@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react'
 import { useProgress } from '../hooks/useProgress'
 import { questionBlocks, getAllQuestions } from '../data/questions'
 import { ResourceFinderInline } from '../components/ResourceFinder'
+import QuestionDetail from '../components/QuestionDetail'
 import './QuestionsPage.css'
 
 function QuestionsPage() {
@@ -10,6 +11,7 @@ function QuestionsPage() {
     const [selectedCategory, setSelectedCategory] = useState(null)
     const [searchQuery, setSearchQuery] = useState('')
     const [filterStatus, setFilterStatus] = useState('all')
+    const [selectedQuestion, setSelectedQuestion] = useState(null)
 
     const allQuestions = useMemo(() => getAllQuestions(), [])
 
@@ -187,14 +189,20 @@ function QuestionsPage() {
                                 <div
                                     key={question.id}
                                     className={`question-item glass-card ${status}`}
-                                    onClick={() => toggleQuestion(question.id)}
+                                    onClick={() => setSelectedQuestion(question)}
                                 >
-                                    <div className={`checkbox ${status === 'mastered' ? 'checked' : ''}`}>
+                                    <div
+                                        className={`checkbox ${status === 'mastered' ? 'checked' : ''}`}
+                                        onClick={(e) => { e.stopPropagation(); toggleQuestion(question.id) }}
+                                    >
                                         {status === 'mastered' && '✓'}
                                     </div>
                                     <div className="question-content">
                                         <span className="question-number">Q{question.id}</span>
                                         <span className="question-text">{question.text}</span>
+                                        {question.description && (
+                                            <span className="has-ai-badge">🎤 AI</span>
+                                        )}
                                     </div>
                                     <ResourceFinderInline text={question.text} context={question.categoryId} />
                                     <div className="question-meta">
@@ -226,6 +234,16 @@ function QuestionsPage() {
                     <span className="summary-label">Complete</span>
                 </div>
             </div>
+
+            {/* Question Detail Modal */}
+            {selectedQuestion && (
+                <QuestionDetail
+                    question={selectedQuestion}
+                    onClose={() => setSelectedQuestion(null)}
+                    onMastered={() => toggleQuestion(selectedQuestion.id)}
+                    isMastered={getQuestionStatus(selectedQuestion.id) === 'mastered'}
+                />
+            )}
         </div>
     )
 }
