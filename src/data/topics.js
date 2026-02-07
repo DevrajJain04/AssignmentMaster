@@ -1,4 +1,4 @@
-// Learning topics for job preparation
+// Learning topics for job preparation with detailed interview questions
 
 export const topics = [
     {
@@ -23,6 +23,23 @@ export const topics = [
             { id: 'segmenttree', title: 'Segment Trees' },
             { id: 'bit', title: 'Bit Manipulation' },
         ],
+        questions: [
+            { id: 'dsa-1', text: 'Two pointer technique?', description: 'When and how do you use the two pointer technique?', keyPoints: ['sorted arrays', 'opposite ends or same direction', 'O(n) instead of O(n²)', 'common in pair problems'] },
+            { id: 'dsa-2', text: 'Sliding window?', description: 'Explain the sliding window pattern.', keyPoints: ['fixed or variable window', 'track window state', 'shrink/expand logic', 'subarray/substring problems'] },
+            { id: 'dsa-3', text: 'Kadane\'s algorithm?', description: 'How does Kadane\'s algorithm work for max subarray?', keyPoints: ['track current and global max', 'reset when negative', 'O(n) time', 'handles all negatives'] },
+            { id: 'dsa-4', text: 'Floyd\'s cycle detection?', description: 'How do slow and fast pointers detect a cycle?', keyPoints: ['slow moves 1, fast moves 2', 'they meet if cycle exists', 'find cycle start', 'O(1) space'] },
+            { id: 'dsa-5', text: 'Reverse linked list?', description: 'Walk through reversing a linked list.', keyPoints: ['three pointers: prev, curr, next', 'iterative or recursive', 'in-place reversal', 'careful with null handling'] },
+            { id: 'dsa-6', text: 'BFS vs DFS?', description: 'When would you choose BFS over DFS?', keyPoints: ['BFS for shortest path', 'DFS for exhaustive search', 'BFS uses queue', 'DFS uses stack/recursion'] },
+            { id: 'dsa-7', text: 'Dijkstra\'s algorithm?', description: 'How does Dijkstra\'s algorithm work?', keyPoints: ['greedy, min-heap based', 'relaxation of edges', 'no negative weights', 'O(E log V) with heap'] },
+            { id: 'dsa-8', text: 'Topological sort?', description: 'When and how is topological sort used?', keyPoints: ['DAG only', 'Kahn\'s (BFS) or DFS', 'dependency ordering', 'detect cycles'] },
+            { id: 'dsa-9', text: 'DP memoization vs tabulation?', description: 'Compare top-down vs bottom-up DP.', keyPoints: ['memoization: recursion + cache', 'tabulation: iterative', 'same time complexity', 'tabulation avoids stack overflow'] },
+            { id: 'dsa-10', text: 'Knapsack problem?', description: 'Explain the 0/1 knapsack approach.', keyPoints: ['dp[i][w] = max value', 'include or exclude item', 'O(nW) time and space', 'space optimization possible'] },
+            { id: 'dsa-11', text: 'LCS and LIS?', description: 'How do you solve LCS and LIS problems?', keyPoints: ['LCS: 2D DP table', 'LIS: O(n log n) with binary search', 'state definition is key', 'backtracking for actual sequence'] },
+            { id: 'dsa-12', text: 'Union-Find?', description: 'How does Union-Find with path compression work?', keyPoints: ['parent array', 'path compression in find', 'union by rank', 'near O(1) amortized'] },
+            { id: 'dsa-13', text: 'Trie operations?', description: 'Explain insert and search in a Trie.', keyPoints: ['node per character', 'isEnd marker', 'O(m) operations', 'prefix queries fast'] },
+            { id: 'dsa-14', text: 'Heap operations?', description: 'How do heapify, insert, and extract work?', keyPoints: ['complete binary tree property', 'heapify: bubble down', 'insert: bubble up', 'O(log n) operations'] },
+            { id: 'dsa-15', text: 'Quick select?', description: 'How do you find kth largest element in O(n)?', keyPoints: ['partition like quicksort', 'recurse on one side only', 'average O(n)', 'worst O(n²)'] },
+        ],
         resources: [
             { title: 'LeetCode', url: 'https://leetcode.com/' },
             { title: 'Codeforces', url: 'https://codeforces.com/' },
@@ -46,6 +63,23 @@ export const topics = [
             { id: 'composition', title: 'Composition vs Inheritance' },
             { id: 'interfaces', title: 'Interfaces & Abstract Classes' },
         ],
+        questions: [
+            { id: 'oop-1', text: 'Four pillars of OOP?', description: 'Explain the four pillars of OOP with examples.', keyPoints: ['encapsulation: data hiding', 'inheritance: code reuse', 'polymorphism: many forms', 'abstraction: hide complexity'] },
+            { id: 'oop-2', text: 'Encapsulation benefits?', description: 'Why is encapsulation important?', keyPoints: ['data protection', 'controlled access', 'easier maintenance', 'reduces coupling'] },
+            { id: 'oop-3', text: 'Inheritance vs composition?', description: 'When would you prefer composition over inheritance?', keyPoints: ['composition for has-a', 'inheritance for is-a', 'composition more flexible', 'avoid tight coupling'] },
+            { id: 'oop-4', text: 'Method overloading vs overriding?', description: 'Explain the difference with examples.', keyPoints: ['overloading: same name, different params', 'overriding: subclass redefines', 'overloading: compile-time', 'overriding: runtime'] },
+            { id: 'oop-5', text: 'Abstract class vs interface?', description: 'When would you use each?', keyPoints: ['interface: pure contract', 'abstract: partial implementation', 'interface: multiple inheritance', 'abstract: shared code'] },
+            { id: 'oop-6', text: 'SOLID - Single Responsibility?', description: 'Explain SRP with an example.', keyPoints: ['one reason to change', 'separate concerns', 'easier testing', 'example: UserAuth vs UserData'] },
+            { id: 'oop-7', text: 'SOLID - Open/Closed?', description: 'What does open for extension, closed for modification mean?', keyPoints: ['extend behavior without modifying', 'use abstractions', 'strategy pattern example', 'reduces regression risk'] },
+            { id: 'oop-8', text: 'SOLID - Liskov Substitution?', description: 'When is LSP violated?', keyPoints: ['subtype must substitute base', 'don\'t break contracts', 'classic: Square extends Rectangle', 'behavior must match'] },
+            { id: 'oop-9', text: 'SOLID - Interface Segregation?', description: 'Why split large interfaces?', keyPoints: ['clients shouldn\'t implement unused methods', 'smaller focused interfaces', 'reduces coupling', 'example: Printable vs Scannable'] },
+            { id: 'oop-10', text: 'SOLID - Dependency Inversion?', description: 'How does DIP help with testing?', keyPoints: ['depend on abstractions', 'not concrete classes', 'enables mocking', 'inject dependencies'] },
+            { id: 'oop-11', text: 'Singleton pattern?', description: 'Implement thread-safe singleton.', keyPoints: ['private constructor', 'double-checked locking', 'or use enum (Java)', 'lazy vs eager init'] },
+            { id: 'oop-12', text: 'Factory pattern?', description: 'When would you use Factory Method?', keyPoints: ['create objects without specifying class', 'flexible object creation', 'encapsulate instantiation', 'example: DocumentFactory'] },
+            { id: 'oop-13', text: 'Observer pattern?', description: 'How does the Observer pattern work?', keyPoints: ['subject notifies observers', 'loose coupling', 'push vs pull model', 'example: event listeners'] },
+            { id: 'oop-14', text: 'Strategy pattern?', description: 'When would you use Strategy?', keyPoints: ['interchangeable algorithms', 'runtime switching', 'avoids conditionals', 'example: payment methods'] },
+            { id: 'oop-15', text: 'Decorator pattern?', description: 'How does Decorator extend functionality?', keyPoints: ['wraps objects', 'adds behavior dynamically', 'alternative to subclassing', 'example: BufferedReader'] },
+        ],
         resources: [
             { title: 'Refactoring Guru', url: 'https://refactoring.guru/design-patterns' },
             { title: 'Head First Design Patterns', url: 'https://www.oreilly.com/library/view/head-first-design/9781492077992/' },
@@ -67,6 +101,23 @@ export const topics = [
             { id: 'nosql', title: 'NoSQL vs SQL' },
             { id: 'cap', title: 'CAP Theorem' },
             { id: 'replication', title: 'Replication & Sharding' },
+        ],
+        questions: [
+            { id: 'dbms-1', text: 'ACID properties?', description: 'Explain each ACID property.', keyPoints: ['Atomicity: all or nothing', 'Consistency: valid state', 'Isolation: concurrent safety', 'Durability: persisted'] },
+            { id: 'dbms-2', text: 'Normalization forms?', description: 'Walk through 1NF, 2NF, 3NF.', keyPoints: ['1NF: atomic values', '2NF: no partial dependencies', '3NF: no transitive dependencies', 'trade-off with performance'] },
+            { id: 'dbms-3', text: 'Index types?', description: 'Compare B-tree and hash indexes.', keyPoints: ['B-tree: range queries', 'hash: equality only', 'B-tree more versatile', 'consider write overhead'] },
+            { id: 'dbms-4', text: 'When not to index?', description: 'When would indexes hurt performance?', keyPoints: ['small tables', 'high write frequency', 'low selectivity columns', 'index maintenance cost'] },
+            { id: 'dbms-5', text: 'SQL joins?', description: 'Explain INNER, LEFT, RIGHT, FULL joins.', keyPoints: ['INNER: matching rows', 'LEFT: all left + matching', 'RIGHT: all right + matching', 'FULL: all from both'] },
+            { id: 'dbms-6', text: 'Transaction isolation levels?', description: 'Compare isolation levels and anomalies.', keyPoints: ['READ UNCOMMITTED: dirty reads', 'READ COMMITTED: no dirty reads', 'REPEATABLE READ: no non-repeatable', 'SERIALIZABLE: no phantoms'] },
+            { id: 'dbms-7', text: 'Deadlock handling?', description: 'How do databases handle deadlocks?', keyPoints: ['detection: wait-for graph', 'prevention: lock ordering', 'timeout and rollback', 'victim selection'] },
+            { id: 'dbms-8', text: 'CAP theorem?', description: 'Explain CAP with examples.', keyPoints: ['Consistency, Availability, Partition tolerance', 'can only have 2 of 3', 'CP: MongoDB', 'AP: Cassandra'] },
+            { id: 'dbms-9', text: 'Sharding strategies?', description: 'Compare horizontal and vertical sharding.', keyPoints: ['horizontal: row distribution', 'vertical: column distribution', 'hash vs range sharding', 'cross-shard queries expensive'] },
+            { id: 'dbms-10', text: 'Replication types?', description: 'Compare master-slave and master-master.', keyPoints: ['master-slave: read scaling', 'master-master: write availability', 'sync vs async replication', 'conflict resolution'] },
+            { id: 'dbms-11', text: 'SQL vs NoSQL?', description: 'When would you choose NoSQL?', keyPoints: ['NoSQL: flexible schema', 'SQL: complex queries, ACID', 'NoSQL: horizontal scaling', 'depends on use case'] },
+            { id: 'dbms-12', text: 'Query optimization?', description: 'How do you optimize a slow query?', keyPoints: ['EXPLAIN ANALYZE', 'add appropriate indexes', 'avoid SELECT *', 'reduce joins if possible'] },
+            { id: 'dbms-13', text: 'Stored procedures vs application code?', description: 'When to use stored procedures?', keyPoints: ['reduce network round trips', 'security (limited access)', 'harder to version control', 'portability issues'] },
+            { id: 'dbms-14', text: 'Connection pooling?', description: 'Why use connection pooling?', keyPoints: ['connection creation expensive', 'reuse existing connections', 'limit max connections', 'avoid exhaustion'] },
+            { id: 'dbms-15', text: 'Database migrations?', description: 'Best practices for schema migrations.', keyPoints: ['version control migrations', 'backward compatible changes', 'test in staging', 'rollback plan'] },
         ],
         resources: [
             { title: 'PostgreSQL Docs', url: 'https://www.postgresql.org/docs/' },
@@ -91,6 +142,23 @@ export const topics = [
             { id: 'filesystem', title: 'File Systems' },
             { id: 'ipc', title: 'Inter-Process Communication' },
         ],
+        questions: [
+            { id: 'os-1', text: 'Process vs thread?', description: 'Explain the key differences.', keyPoints: ['process: separate memory', 'thread: shared memory', 'threads lighter weight', 'context switch cost'] },
+            { id: 'os-2', text: 'Context switching?', description: 'What happens during a context switch?', keyPoints: ['save current state', 'load new state', 'CPU registers, PC', 'overhead varies by OS'] },
+            { id: 'os-3', text: 'CPU scheduling algorithms?', description: 'Compare FCFS, SJF, Round Robin.', keyPoints: ['FCFS: simple, convoy effect', 'SJF: optimal waiting time', 'RR: fair time slices', 'priority scheduling'] },
+            { id: 'os-4', text: 'Deadlock conditions?', description: 'What are the four necessary conditions?', keyPoints: ['mutual exclusion', 'hold and wait', 'no preemption', 'circular wait'] },
+            { id: 'os-5', text: 'Deadlock prevention vs avoidance?', description: 'Compare the approaches.', keyPoints: ['prevention: break conditions', 'avoidance: banker\'s algorithm', 'detection: wait-for graph', 'recovery: kill or rollback'] },
+            { id: 'os-6', text: 'Mutex vs semaphore?', description: 'When would you use each?', keyPoints: ['mutex: binary, ownership', 'semaphore: counting, no ownership', 'mutex for mutual exclusion', 'semaphore for signaling'] },
+            { id: 'os-7', text: 'Race condition example?', description: 'Give a real-world race condition.', keyPoints: ['shared counter without lock', 'check-then-act pattern', 'time-of-check-time-of-use', 'fix with synchronization'] },
+            { id: 'os-8', text: 'Virtual memory?', description: 'How does virtual memory work?', keyPoints: ['abstraction over physical memory', 'page tables map addresses', 'allows larger address space', 'demand paging'] },
+            { id: 'os-9', text: 'Page replacement algorithms?', description: 'Compare LRU, FIFO, Optimal.', keyPoints: ['FIFO: simple, Belady\'s anomaly', 'LRU: good but expensive', 'Optimal: theoretical best', 'Clock algorithm practical'] },
+            { id: 'os-10', text: 'Thrashing?', description: 'What causes thrashing and how to prevent it?', keyPoints: ['too many page faults', 'system spends time swapping', 'reduce multiprogramming', 'working set model'] },
+            { id: 'os-11', text: 'IPC mechanisms?', description: 'Compare pipes, shared memory, message queues.', keyPoints: ['pipes: one-way, related processes', 'shared memory: fastest', 'message queues: structured', 'sockets: network capable'] },
+            { id: 'os-12', text: 'User mode vs kernel mode?', description: 'Why have two modes?', keyPoints: ['kernel: privileged operations', 'user: restricted access', 'system calls switch modes', 'protection mechanism'] },
+            { id: 'os-13', text: 'Interrupt handling?', description: 'How does the CPU handle interrupts?', keyPoints: ['save state', 'jump to handler', 'execute ISR', 'restore and return'] },
+            { id: 'os-14', text: 'File system types?', description: 'Compare ext4, NTFS, ZFS.', keyPoints: ['ext4: Linux default', 'NTFS: Windows, journaling', 'ZFS: checksums, snapshots', 'choose based on needs'] },
+            { id: 'os-15', text: 'Fork vs exec?', description: 'How do fork and exec work together?', keyPoints: ['fork: copy process', 'exec: replace image', 'common pattern: fork then exec', 'COW optimization'] },
+        ],
         resources: [
             { title: 'OSTEP', url: 'https://pages.cs.wisc.edu/~remzi/OSTEP/' },
             { title: 'MIT 6.S081', url: 'https://pdos.csail.mit.edu/6.S081/' },
@@ -112,6 +180,23 @@ export const topics = [
             { id: 'loadbalancing', title: 'Load Balancing' },
             { id: 'cdn', title: 'CDN' },
             { id: 'ssl', title: 'SSL/TLS' },
+        ],
+        questions: [
+            { id: 'cn-1', text: 'OSI layers?', description: 'Name and explain each OSI layer.', keyPoints: ['Physical, Data Link, Network', 'Transport, Session, Presentation', 'Application', 'each layer\'s responsibility'] },
+            { id: 'cn-2', text: 'TCP vs UDP?', description: 'When would you choose UDP over TCP?', keyPoints: ['TCP: reliable, ordered, connection', 'UDP: fast, no guarantee', 'UDP for streaming, gaming', 'TCP for web, file transfer'] },
+            { id: 'cn-3', text: 'TCP handshake?', description: 'Walk through the 3-way handshake.', keyPoints: ['SYN from client', 'SYN-ACK from server', 'ACK from client', 'connection established'] },
+            { id: 'cn-4', text: 'HTTP methods?', description: 'Explain REST HTTP methods.', keyPoints: ['GET: read, idempotent', 'POST: create', 'PUT: update/replace', 'DELETE: remove'] },
+            { id: 'cn-5', text: 'HTTP status codes?', description: 'Categorize HTTP status codes.', keyPoints: ['2xx: success', '3xx: redirect', '4xx: client error', '5xx: server error'] },
+            { id: 'cn-6', text: 'HTTPS handshake?', description: 'How does TLS/SSL work?', keyPoints: ['client hello', 'server certificate', 'key exchange', 'symmetric encryption'] },
+            { id: 'cn-7', text: 'DNS resolution?', description: 'Walk through a DNS lookup.', keyPoints: ['browser cache', 'OS cache', 'recursive resolver', 'root, TLD, authoritative'] },
+            { id: 'cn-8', text: 'CDN benefits?', description: 'How does a CDN improve performance?', keyPoints: ['geographic proximity', 'caching static content', 'reduces origin load', 'DDoS protection'] },
+            { id: 'cn-9', text: 'Load balancer algorithms?', description: 'Compare load balancing strategies.', keyPoints: ['round robin', 'least connections', 'IP hash', 'weighted distribution'] },
+            { id: 'cn-10', text: 'REST vs GraphQL?', description: 'When would you choose GraphQL?', keyPoints: ['GraphQL: flexible queries', 'REST: simpler, cacheable', 'GraphQL: one endpoint', 'REST: multiple endpoints'] },
+            { id: 'cn-11', text: 'WebSocket vs HTTP?', description: 'When do you need WebSockets?', keyPoints: ['WebSocket: bi-directional', 'HTTP: request-response', 'WebSocket: real-time', 'HTTP: stateless'] },
+            { id: 'cn-12', text: 'CORS?', description: 'What is CORS and why is it needed?', keyPoints: ['Cross-Origin Resource Sharing', 'browser security policy', 'preflight OPTIONS request', 'server must allow origin'] },
+            { id: 'cn-13', text: 'Cookies vs sessions?', description: 'Compare cookies and server sessions.', keyPoints: ['cookies: client-side storage', 'sessions: server-side state', 'session ID in cookie', 'security considerations'] },
+            { id: 'cn-14', text: 'TCP congestion control?', description: 'How does TCP handle congestion?', keyPoints: ['slow start', 'congestion avoidance', 'fast retransmit', 'fast recovery'] },
+            { id: 'cn-15', text: 'NAT?', description: 'What is NAT and why is it needed?', keyPoints: ['Network Address Translation', 'private to public IP', 'IPv4 address exhaustion', 'port forwarding'] },
         ],
         resources: [
             { title: 'High Performance Browser Networking', url: 'https://hpbn.co/' },
@@ -138,6 +223,23 @@ export const topics = [
             { id: 'testing', title: 'Testing (Jest, Pytest)' },
             { id: 'docker', title: 'Docker & Containerization' },
         ],
+        questions: [
+            { id: 'web-1', text: 'Semantic HTML?', description: 'Why use semantic HTML elements?', keyPoints: ['accessibility', 'SEO benefits', 'code readability', 'example: nav, article, section'] },
+            { id: 'web-2', text: 'CSS Box Model?', description: 'Explain the CSS box model.', keyPoints: ['content, padding, border, margin', 'box-sizing: border-box', 'affects element dimensions', 'collapsing margins'] },
+            { id: 'web-3', text: 'Flexbox vs Grid?', description: 'When would you use each?', keyPoints: ['Flexbox: 1D layouts', 'Grid: 2D layouts', 'Flexbox for components', 'Grid for page layouts'] },
+            { id: 'web-4', text: 'JavaScript event loop?', description: 'Explain the event loop and call stack.', keyPoints: ['call stack: sync execution', 'task queue: callbacks', 'microtask queue: promises', 'event loop coordinates'] },
+            { id: 'web-5', text: 'Closures?', description: 'What is a closure and common uses?', keyPoints: ['function + lexical scope', 'access outer variables', 'data privacy', 'example: counter, debounce'] },
+            { id: 'web-6', text: 'Promises vs async/await?', description: 'Compare the two patterns.', keyPoints: ['async/await: cleaner syntax', 'both handle async', 'error handling differences', 'try/catch vs .catch()'] },
+            { id: 'web-7', text: 'React virtual DOM?', description: 'How does the virtual DOM work?', keyPoints: ['in-memory representation', 'diffing algorithm', 'batch updates', 'reconciliation process'] },
+            { id: 'web-8', text: 'React hooks rules?', description: 'What are the rules of hooks?', keyPoints: ['only at top level', 'only in React functions', 'consistent order', 'no conditionals'] },
+            { id: 'web-9', text: 'useEffect cleanup?', description: 'When and why use effect cleanup?', keyPoints: ['return cleanup function', 'runs before next effect', 'prevent memory leaks', 'example: unsubscribe'] },
+            { id: 'web-10', text: 'State management when?', description: 'When do you need Redux/Zustand?', keyPoints: ['shared state across components', 'complex state logic', 'dev tools benefits', 'prop drilling alternative'] },
+            { id: 'web-11', text: 'API design best practices?', description: 'REST API design principles.', keyPoints: ['resource-based URLs', 'proper HTTP methods', 'status codes', 'versioning strategy'] },
+            { id: 'web-12', text: 'JWT structure?', description: 'Explain the three parts of a JWT.', keyPoints: ['header: algorithm', 'payload: claims', 'signature: verification', 'base64 encoded'] },
+            { id: 'web-13', text: 'XSS prevention?', description: 'How do you prevent XSS attacks?', keyPoints: ['sanitize user input', 'escape output', 'Content-Security-Policy', 'httpOnly cookies'] },
+            { id: 'web-14', text: 'Testing pyramid?', description: 'Explain the testing pyramid.', keyPoints: ['unit tests: many, fast', 'integration: medium', 'E2E: few, slow', 'balance coverage and speed'] },
+            { id: 'web-15', text: 'Docker basics?', description: 'Explain Dockerfile, image, container.', keyPoints: ['Dockerfile: build instructions', 'image: blueprint', 'container: running instance', 'layers and caching'] },
+        ],
         resources: [
             { title: 'MDN Web Docs', url: 'https://developer.mozilla.org/' },
             { title: 'React Docs', url: 'https://react.dev/' },
@@ -150,4 +252,9 @@ export const topics = [
 // Helper to get all subtopics count
 export const getTotalSubtopics = () => {
     return topics.reduce((total, topic) => total + topic.subtopics.length, 0)
+}
+
+// Helper to get all topic questions count
+export const getTotalTopicQuestions = () => {
+    return topics.reduce((total, topic) => total + (topic.questions?.length || 0), 0)
 }

@@ -26,7 +26,7 @@ function Sidebar() {
                         <span className="logo-icon">🎯</span>
                         <div className="logo-text">
                             <span className="logo-title">AssignmentMaster</span>
-                            <span className="logo-subtitle">Crack that 10+ LPA</span>
+                            <span className="logo-subtitle">Crack that elite offer</span>
                         </div>
                     </div>
                 </div>

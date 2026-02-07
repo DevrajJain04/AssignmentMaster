@@ -43,7 +43,7 @@ function Dashboard() {
             <header className="dashboard-header">
                 <div className="header-content">
                     <h1 className="greeting">{greeting()}, <span className="text-gradient">Champion</span> 🚀</h1>
-                    <p className="header-subtitle">Your journey to 10+ LPA starts here. Let's crush it today!</p>
+                    <p className="header-subtitle">Your journey to success starts here. Let's crush it today!</p>
                 </div>
                 {streak > 0 && (
                     <div className="streak-display animate-glow">
@@ -235,7 +235,7 @@ function Dashboard() {
             <div className="goal-reminder glass-card glass-card--accent">
                 <div className="goal-content">
                     <h3>🎯 Your Goal</h3>
-                    <p className="goal-text">Crack a <strong>10+ LPA off-campus fresher job</strong></p>
+                    <p className="goal-text">Crack a <strong>Big tech can be cracked</strong></p>
                     <p className="goal-subtext">Master DSA, build killer projects, ace interviews</p>
                 </div>
                 <div className="goal-decoration">

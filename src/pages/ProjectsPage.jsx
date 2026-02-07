@@ -15,7 +15,7 @@ function ProjectsPage() {
             <header className="page-header">
                 <div>
                     <h1 className="page-title">Portfolio Projects 🚀</h1>
-                    <p className="page-subtitle">Build these to showcase your skills and land that 10+ LPA job</p>
+                    <p className="page-subtitle">Build these to showcase your skills</p>
                 </div>
             </header>
 
